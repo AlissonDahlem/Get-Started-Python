@@ -1,13 +1,13 @@
 # Boas Vindas ao repositório de introdução à Python
 
-## Aqui você vai encontrar exercícios para treinar conceitos introdutórios à linguagem Python. Você encontra esse conteúdo [aqui](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/290e715d-73e3-4b2d-a3c7-4fe113474070/section/b436f9e0-dfde-4a16-9bad-82f0c559dd45/day/bee44ac6-0782-48cd-9ce8-1811980e558e/lesson/71641e4a-4804-43d0-b91c-b6c0c8724013) dentro da plataforma de aprendizagem.
+## Aqui você vai encontrar exercícios para treinar conceitos introdutórios à linguagem Python com uma API simples.
 ---
 
 ## Como começar?
 <details>
 <summary> Passo a Passo </summary>
 
-1. Tenha o Python instalado em sua máquina ([guia aqui](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e-4588-8950-3b1a29afd2dd/section/aa76abc8-b842-40d9-b5cc-baa960952129/lesson/3f79a20e-f527-4871-b69b-544310cfbda0 "Guia de configuração de ambiente Python")), caso tenha dúvidas sobre esse ponto, poste no canal da turma e o time responsável irá te ajudar aqui. 
+1. Tenha o Python instalado em sua máquina. 
 
 2. Crie o ambiente virtual que será utilizado para instalar as dependências
 
@@ -318,5 +318,3 @@ def return_element_from_list_that_is_string(input_list):
 </details>
 
 ---
-
-## Qualquer dúvida ou problema, basta postar no canal do slack da turma ou procurar o time de instrução responsável 😊, bons estudos!
