@@ -1,4 +1,5 @@
 from termios import VLNEXT
+from typing import Dict
 
 
 def is_bool(value):
@@ -47,17 +48,21 @@ def remove_element_from_list(element, input_list: list):
     return input_list
 
 
-def create_new_key_value_in_dict(key, value, input_dict):
-    return
+def create_new_key_value_in_dict(key, value, input_dict: dict):
+    input_dict[key] = value
+    return input_dict
 
 
-def delete_key_from_dict(key, input_dict):
-    return
+def delete_key_from_dict(key, input_dict: dict):
+    input_dict.pop(key)
+    return input_dict
 
 
-def add_element_to_set(element, input_set):
-    return
+def add_element_to_set(element, input_set: set):
+    input_set.add(element)
+    return input_set
 
 
-def remove_element_from_set(element, input_set):
-    return
+def remove_element_from_set(element, input_set: set):
+    input_set.remove(element)
+    return input_set
