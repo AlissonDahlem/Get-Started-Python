@@ -1,7 +1,11 @@
 # Boas Vindas ao repositório de introdução à Python
 
 ## Aqui você vai encontrar exercícios para treinar conceitos introdutórios à linguagem Python com uma API simples.
+
+apenas o código presente na pasta exercises e main.py foi feito por mim, o restante foi feito pela Trybe.
 ---
+
+
 
 ## Como começar?
 <details>
