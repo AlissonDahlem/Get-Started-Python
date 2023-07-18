@@ -1,324 +1,470 @@
-# Boas Vindas ao repositório de introdução à Python
+# Boas-vindas ao repositório do projeto Arte com Pixels
 
-## Aqui você vai encontrar exercícios para treinar conceitos introdutórios à linguagem Python com uma API simples.
+Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, nos envie por Slack! #vqv :rocket:
 
-apenas o código presente na pasta exercises e main.py foi feito por mim, o restante foi feito pela Trybe.
----
+Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
+# Termos e acordos
 
+Ao iniciar este projeto, você concorda com as diretrizes do [Código de Conduta e do Manual da Pessoa Estudante da Trybe](https://app.betrybe.com/manual-estudante/codigo-de-etica-e-conduta).
 
-## Como começar?
+# Entregáveis
+
 <details>
-<summary> Passo a Passo </summary>
+  <summary><strong>🤷🏽‍♀️ Como entregar</strong></summary><br />
 
-1. Tenha o Python instalado em sua máquina. 
+  Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
 
-2. Crie o ambiente virtual que será utilizado para instalar as dependências
+  Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/4d67f5b4-34a6-489f-a205-b6c7dc50fc16/) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
+</details>
 
-```bash
-python3 -m venv .venv
-```
+<details>
+  <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
 
-3. Ative o ambiente virtual que foi criado
+Neste projeto, você vai implementar um editor de arte com pixels em que a pessoa usuária poderá escolher uma cor em uma paleta de cores e poderá pintar o que quiser em um quadro branco 🎨 🧑‍🎨
 
-```bash
-source .venv/bin/activate
-```
+💡 Veja o exemplo a seguir de como o projeto pode se parecer depois de pronto.
 
-4. Instale os requerimentos deste repositório 
+![exemplo de arte com pixels](./art-with-pixels.gif)
 
-```bash
-python3 -m pip install -r dev-requirements.txt
-```
-
-5. Execute todos os testes do repositório (note que, enquanto não houver implementação nas funções, os testes falharão!)
-
-```bash
-python3 -m pytest
-```
-
-6. Execute os testes de um arquivo específico (note que, enquanto não houver implementação nas funções, os testes falharão!)
-
-```bash
-python3 -m pytest tests/<caminho/para/o/arquivo/de/teste>
-```
-
-7. Execute apenas um teste específico de um arquivo específico (note que, enquanto não houver implementação nas funções, os testes falharão!)
-
-```bash
-python3 -m pytest tests/<caminho/para/o/arquivo/de/teste>::<nome_da_função_do_teste>
-```
+Você pode ~~e deve~~ ir além para deixar o projeto com a sua cara e impressionar todas as pessoas, mas não deixe de cumprir os requisitos!
 
 </details>
 
----
-
-
-## Detalhamento sobre os exercícios
-
 <details>
+  <summary><strong>🗓 Data de Entrega</strong></summary><br />
 
-<summary> Operações Básicas </summary>
-<br>
-
-
-### Os exercícios relacionados às operações básicas na linguagem `Python` podem ser encontrados no arquivo `exercises/basic_operations.py`, o que se espera de cada um destes exercícios será detalhado abaixo:
-
-
-<br>
-
-1. A função abaixo deve receber dois números e retornar o valor correspondente à soma dos mesmos.
-
-```bash
-def basic_sum(first_number, second_number):
-    return 
-```
-
-2. A função abaixo deve receber dois números e retornar o valor correspondente à diferença do primeiro número em relação ao segundo.
-
-```bash
-def basic_difference(first_number, second_number):
-    return 
-```
-
-3. A função abaixo deve receber dois números e retornar o valor correspondente ao produto dos mesmos.
-
-```bash
-def basic_product(first_number, second_number):
-    return 
-```
-
-4. A função abaixo deve receber dois números e retornar o valor correspondente à divisão do primeiro com o segundo número.
-
-```bash
-def basic_division(first_number, second_number):
-    return 
-```
-
-5. A função abaixo deve receber dois números e retornar o valor correspondente à divisão inteira (quociente) do primeiro com o segundo número.
-
-```bash
-def basic_integer_division(first_number, second_number):
-    return 
-```
-
-6. A função abaixo deve receber dois números e retornar o valor correspondente ao resto da divisão entre o primeiro e o segundo número.
-
-```bash
-def basic_remainder(first_number, second_number):
-    return 
-```
-
-7. A função abaixo deve receber dois números e retornar o valor correspondente ao primeiro número elevado ao segundo.
-
-```bash
-def basic_potentiation(first_number, second_number):
-    return 
-```
+* Este projeto é individual;
+* Serão `2` dias de projeto;
+* Data para entrega do projeto: `21/07/2023 23:59`.
 
 </details>
 
----
+# Orientações
 
-<br>
 <details>
+  <summary><strong>‼️ Antes de começar a desenvolver</strong></summary><br />
 
-<summary> Tipos de Dados em Python </summary>
-<br>
+1. Clone o repositório
 
+* Use o comando: `git clone git@github.com:tryber/sd-035-project-pixels-art.git`
+* Entre na pasta do repositório que você acabou de clonar:
+  * `cd sd-035-project-pixels-art`
 
-### Os exercícios relacionados aos tipos de dados na linguagem `Python` podem ser encontrados no arquivo: `exercises/python_data_types.py`, o que se espera de cada um destes exercícios será detalhado abaixo:
+2. Instale as dependências
 
+* `npm install`
 
-<br>
+3. Crie uma branch a partir da branch `main`
 
-1. A função abaixo deve verificar se o valor recebido como parâmetro é do tipo booleano.
+* Verifique que você está na branch `main`
+  * Exemplo: `git branch`
+* Se não estiver, mude para a branch `main`
+  * Exemplo: `git checkout main`
+* Agora crie uma branch à qual você vai submeter os `commits` de seu projeto
+  * Você deve criar uma branch no seguinte formato: `nome-sobrenome-nome-do-projeto`
+  * Exemplo: `git checkout -b mariazinha-project-pixels-art`
 
-```bash
-def is_bool(value):
-    return 
-```
+4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
 
-2. A função abaixo deve verificar se o valor recebido como parâmetro é do tipo inteiro.
+* Verifique que as mudanças ainda não estão no _stage_
+  * Exemplo: `git status` (devem aparecer listados os novos arquivos em vermelho)
+* Adicione o novo arquivo ao _stage_ do Git
+  * Exemplo:
+    * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
+    * `git status` (devem aparecer listados os arquivos em verde)
+* Faça o `commit` inicial
+  * Exemplo:
+    * `git commit -m 'iniciando o projeto pixels art'` (fazendo o primeiro commit)
+    * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
-```bash
-def is_int(value):
-    return 
-```
+5. Adicione a sua branch com o novo `commit` ao repositório remoto
 
-3. A função abaixo deve verificar se o valor recebido como parâmetro é do tipo float.
+* Usando o exemplo anterior: `git push -u origin mariazinha-project-pixels-art`
 
-```bash
-def is_float(value):
-    return  
-```
+6. Crie um novo `Pull Request` _(PR)_
 
-4. A função abaixo deve verificar se o valor recebido como parâmetro é do tipo string.
-
-```bash
-def is_string(value):
-    return 
-```
-
-5. A função abaixo deve verificar se o valor recebido como parâmetro é do tipo lista.
-
-```bash
-def is_list(value):
-    return 
-```
-
-6. A função abaixo deve verificar se o valor recebido como parâmetro é do tipo tupla.
-
-```bash
-def is_tuple(value):
-    return 
-```
-
-7. A função abaixo deve verificar se o valor recebido como parâmetro é do tipo conjunto.
-
-```bash
-def is_set(value):
-    return 
-```
-
-8. A função abaixo deve verificar se o valor recebido como parâmetro é do tipo dicionário.
-
-```bash
-def is_dict(value):
-    return 
-```
-
-9. A função abaixo recebe uma string genérica como parâmetro e deve retornar a mesma string, no entanto, todos os caracteres maiúsculos devem ser convertidos em minúsculos.
-
-```bash
-def return_lower_case_string(word):
-    return 
-```
-
-10. A função abaixo recebe um elemento e uma lista como parâmetros e deve retornar a mesma lista, mas agora contendo o elemento em sua última posição.
-
-```bash
-def append_element_in_list(element, input_list):
-    return 
-```
-
-11. A função abaixo recebe um elemento e uma lista como parâmetros e deve retornar a mesma lista, mas agora removendo o elemento passado como parâmetro.
-
-```bash
-def remove_element_from_list(element, input_list):
-    return 
-```
-
-12. A função abaixo recebe uma chave, um valor e um dicionário como parâmetros e deve retornar o mesmo dicionário contendo o novo par chave: valor.
-
-```bash
-def create_new_key_value_in_dict(key, value, input_dict):
-    return 
-```
-
-13. A função abaixo recebe uma chave e um dicionário como parâmetros e deve retornar o mesmo  dicionário, mas agora removendo a chave passada como parâmetro.
-
-```bash
-def delete_key_from_dict(key, input_dict):
-    return 
-```
-
-14. A função abaixo recebe um elemento e um conjunto como parâmetros e deve retornar o mesmo conjunto contendo o elemento.
-
-```bash
-def add_element_to_set(element, input_set):
-    return 
-```
-
-15. A função abaixo recebe um elemento e um conjunto como parâmetros e deve retornar o mesmo conjunto removendo o elemento passado como parâmetro
-
-```bash
-def remove_element_from_set(element, input_set):
-    return 
-```
-
+* Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-035-project-pixels-art/pulls)
+* Clique no botão verde _"New pull request"_
+* Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
+* Coloque um título para a sua Pull Request
+  * Exemplo: "Cria tela de busca"
+* Clique no botão verde "Create pull request"
+* Adicione uma descrição para o _Pull Request_, e clique no botão verde _"Create pull request"_
+* **Não se preocupe em preencher mais nada por enquanto!**
+* Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-035-project-pixels-art/pulls) e confira que o seu _Pull Request_ está criado
 
 </details>
 
----
-
-<br>
 <details>
+  <summary><strong>⌨️ Durante o desenvolvimento</strong></summary>
 
-<summary> Condicionais </summary>
-<br>
+* Faça `commits` das alterações que você fizer no código regularmente
 
+* Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
 
-### Os exercícios relacionados às estruturas condicionais na linguagem `Python` podem ser encontrados no arquivo: `exercises/conditionals.py`. Pode ser que você encontre uma resolução para estes exercícios que não necessite de uma estrutura condicional (ifs), contudo, para fins didáticos, recomenda-se sua utilização. O que se espera de cada um destes exercícios será detalhado abaixo:
-
-
-<br> 
-
-1. A função abaixo deve verificar se a string passada como parâmetro possui 4 ou mais caracteres, em caso positivo, deve retornar `True`, em caso negativo, retornar `False`.
-
-```bash
-def check_if_word_has_4_or_more_letters(word):
-    return 
-```
-
-2. A função abaixo recebe dois números como parâmetros e deve retornar aquele que é maior entre eles, em caso de igualdade, o retorno pode ser qualquer um dos dois.
-
-```bash
-def check_what_number_is_greater(first_number, second_number):
-    return 
-```
-
-3. A função abaixo deve verificar se o número recebido como parâmetro é par ou ímpar. Caso seja par, a função deve retornar `"even"`, caso seja ímpar, deve retornar `"odd"`.
-
-```bash
-def check_if_number_is_odd_or_even(number):
-    return 
-```
-
-4. A função abaixo recebe um elemento e uma lista como parâmetros e deve verificar se o elemento está contido na lista, em caso positivo, deve retornar `True`, em caso negativo, retornar `False`.
-
-```bash
-def check_if_element_exists_in_list(element, input_list):
-    return 
-```
+* Os comandos que você utilizará com mais frequência são:
+  1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_;
+  2. `git add` _(para adicionar arquivos ao stage do Git)_;
+  3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_;
+  4. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_;
+  5. `git push -u origin nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_.
 
 </details>
 
----
-
-<br>
 <details>
+  <summary><strong>🤝 Depois de terminar o desenvolvimento (opcional)</strong></summary><br />
 
-<summary> Repetição </summary>
-<br>
+Para sinalizar que o seu projeto está pronto para o _"Code Review"_, faça o seguinte:
 
+* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-035`.
 
-### Os exercícios relacionados às estruturas de repetição na linguagem `Python` podem ser encontrados no arquivo: `exercises/repetition.py`. Pode ser que você encontre uma resolução para estes exercícios que não necessite de uma estrutura de repetição (for, while), contudo, para fins didáticos, recomenda-se sua utilização. O que se espera de cada um destes exercícios será detalhado abaixo:
-
-<br>
-
-
-1. A função abaixo recebe uma string como parâmetro e deve retornar uma lista contendo cada um dos caracteres da string. A ordem dos caracteres na lista deve ser a mesma ordem da string.
-
-```bash
-def append_each_letter_of_the_word_in_a_list(word):
-    return 
-```
-
-2. A função abaixo recebe uma string genérica que tem apenas uma letra maiúscula como parâmetro. A função deve retornar o número que corresponde ao índice (posição) da letra maiúscula na string.
-
-```bash
-def return_index_of_the_uppercase_letter(word):
-    return
-```
-
-3. A função abaixo recebe uma lista como parâmetro na qual apenas um de seus elementos é uma string. A função deve retornar esse elemento.
-
-```bash
-def return_element_from_list_that_is_string(input_list):
-    return 
-```
+Caso tenha alguma dúvida, veja este [video explicativo](https://vimeo.com/362189205).
 
 </details>
 
----
+<details>
+  <summary><strong>🕵🏿 Revisando um pull request</strong></summary><br />
+
+Use o conteúdo sobre [Code Review](https://app.betrybe.com/course/real-life-engineer/code-review) para te ajudar a revisar os _Pull Requests_.
+
+</details>
+
+<details>
+  <summary><strong>🏗 Estrutura do projeto</strong></summary>
+
+* Implemente uma paleta de cores usando `javascript`, `css` e `html`;
+
+* Crie os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente;
+
+:warning: **É importante que seus arquivos tenham exatamente estes nomes!** :warning:
+
+* Você pode adicionar outros arquivos se julgar necessário. Caso tenha alguma dúvida, poste no _Slack_;
+
+ ⚠️ **Recomenda-se que você desenvolva seu projeto com a resolução de tela  de `1366 x 768`, a mesma que será utilizada pelo avaliador. Para facilitar a configuração da resolução, use este [plugin do `Chrome`](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en).** ⚠️
+
+* Caso seu projeto contenha imagens, ⚠️ **Atenção**:
+  * Não utilize arquivos maiores que _500Kb_;
+  * Utilize uma ferramenta como [esta](https://picresize.com/pt) para redimensionar as imagens.
+
+* Você tem liberdade para implementar novos comportamentos ao seu projeto, seja na forma de aperfeiçoamentos em requisitos propostos ou novas funcionalidades, mas atente-se para **não conflitar com os requisitos propostos**.
+
+</details>
+
+<details>
+  <summary><strong>⚛️ Dicas</strong></summary>
+
+* Não recomenda-se a utilização de `table`, pois o sentido semântico de construir uma tabela no HTML não tem relação  com a construção de uma grade de pixels para serem coloridos. Nesse caso, fazer uso de `table` representa uma má prática;
+
+**Atenção ⚠️:** É importante que você inicie o projeto utilizando seus conhecimentos em **manipulação de DOM com JavaScript** pois além de ser o **objetivo do projeto**, vai deixar seu código mais limpo, fácil de ajustar e evitar repetições;
+
+* Que tal usar um [_loop_](https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/) para adicionar o mesmo evento em vários elementos? Ou então a técnica de [_event bubbling_](https://gomakethings.com/attaching-multiple-elements-to-a-single-event-listener-in-vanilla-js/) combinada com `classList`?
+
+* Se precisar consultar os valores do _CSS_ de um elemento a partir do _JavaScript_, [dê uma olhada aqui](https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp);
+
+* Para alterar alguma propriedade do _CSS_ de um elemento por meio do _JavaScript_, dê uma olhada no [atributo `style`](https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp) do elemento.
+* Caso a avaliação falhe com alguma mensagem de erro do tipo `[409:0326/130838.878602:FATAL:memory.cc(22)] Out of memory. size=4194304` é provável que as imagens que está utilizando são muito grandes. Tente redimensioná-las para um tamanho menor.
+
+* Ao trabalhar com desenvolvimento, você vai se deparar com vários tipos de desafios, por isso é muito importante que os problemas sejam quebrados em partes menores, para que sejam resolvidos aos poucos. Isso vai te ajudar a encontrar uma solução de maneira mais fácil. Dessa forma, um bom jeito de começar a desenvolver um projeto é lembrar que as funções são compostas por pequenos blocos de lógica que têm um objetivo específico.
+  
+* Antes de começar a desenvolver, entenda o que está sendo requisitado e planeje como será feito.  
+</details>
+
+<details>
+  <summary><strong>🎛 Linter</strong></summary><br />
+
+Para garantir a qualidade do código, vamos utilizar neste projeto os linters `ESLint` e `StyleLint`.
+Desta forma, o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível e de fácil manutenção!
+  Para rodar o `ESLint` e o `StyleLint` localmente no projeto, execute os comandos abaixo:
+
+  1. Para avaliar se os arquivos com a extensão `CSS` estão com o padrão correto
+
+```bash
+npm run lint:styles
+```
+
+  2. Para avaliar se os arquivos com a extensão `JS` estão com o padrão correto
+
+```bash
+npm run lint
+```
+
+⚠️ **Atenção** O `ESLint` e o `StyleLint` não serão avaliados neste projeto. Você pode rodar os testes localmente e fazer as correções se desejar. ⚠️
+
+</details>
+
+<details>
+  <summary><strong>🛠 Testes e Cypress</strong></summary><br />
+
+O Cypress é uma ferramenta de teste de front-end desenvolvida para a web. Antes de utilizá-lo, certifique-se de ter executado o comando `npm install` dentro do projeto.
+
+Você pode rodar o Cypress localmente para verificar se seus requisitos estão passando, para isso execute um dos seguintes comandos:
+
+1. Para executar os testes apenas no terminal:
+
+```bash
+npm test
+```
+
+2. Para executar os testes e vê-los rodando em uma janela de navegador:
+
+```bash
+npm run cypress:open
+```
+
+Após executar o comando acima, uma janela de navegador será aberta e, então, você poderá escolher o arquivo de teste a ser executado ou escolher `Run all specs` para executar todos os arquivos
+
+Assista [este vídeo](https://vimeo.com/539240375/a116a166b9) para ver como rodar o Cypress localmente 😉🎙
+
+* Siga este passo a passo para verificar os **detalhes da execução do avaliador**:
+
+  * Na página do seu _Pull Request_, acima do "botão de merge", procure por _**"Evaluator job"**_ e clique no link _**"Details"**_;
+
+  * Na página que se abrirá, clique na linha _**"Cypress evaluator step"**_ ;
+
+  * Analise os resultados a partir da mensagem _**"(Run Starting)"**_;
+
+  * Caso tenha dúvidas, consulte [este vídeo](https://vimeo.com/420861252) ou poste a sua dúvida no _Slack_.
+
+⚠️ **O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?**
+
+* Contudo, tenha em mente que **nada além do que for pedido nos requisitos será avaliado**. _Esta é uma oportunidade de você exercitar sua criatividade e experimentar com os conhecimentos adquiridos._
+
+O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+
+</details>
+
+<details>
+  <summary><strong>🔗 Links auxiliares para o desenvolvimento
+do projeto</strong></summary>
+
+* Como pessoa desenvolvedora você deve fazer pesquisas para auxiliar o seu entendimento do assunto. Assim, para solucionar os requisitos do projeto é inevitável e estimulado que pesquisas sejam feitas nas mais variadas fontes (plataforma da Trybe, google, youtube, etc) sempre tomando cuidado para utilizar fontes **confiáveis** nas pesquisas da Internet, como por exemplo:
+
+  * [Javascript.com](http://javascript.com/)
+
+  * [W3Schools](https://www.w3schools.com/js/default.asp)
+
+  * [MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+
+  * [StackOverflow](https://pt.stackoverflow.com/questions/tagged/javascript)
+
+</details>
+
+<details>
+  <summary><strong>🗣 Nos dê feedbacks sobre o projeto!</strong></summary><br />
+
+Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. **Leva menos de 3 minutos!**
+
+Link: [Formulário de avaliação do projeto](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH35&template=betrybe/sd-0x-project-pixels-art)
+
+</details>
+
+<details>
+  <summary><strong>🗂 Compartilhe seu portfólio!</strong></summary><br />
+
+Você sabia que o **LinkedIn** é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso?
+
+Compartilhe esse projeto no seu **LinkedIn**, marque o perfil da Trybe (**@trybe**) e mostre para a sua rede toda a sua evolução.
+
+</details>
+
+# Requisitos Obrigatórios
+
+:warning: **Leia todos os requisitos atentamente e siga à risca o que for pedido. Em particular,**atente-se para os nomes de _ids_  e _classes_ que alguns elementos de seu projeto devem possuir**. Não troque `ids` por `classes` ou vice-versa** :warning:
+
+**De olho na dica 👀:** Existem várias formas de realizar os requisitos desse projeto, lembre-se que você pode usar o que já aprendeu até agora sobre HTML e principalmente **manipulação do DOM com JavaScript**.
+
+## 1 - Adicione à página o título "Paleta de Cores" e uma paleta contendo quatro cores distintas
+
+<details>
+  <summary>A página deve conter o título "Paleta de Cores" e uma paleta com quatro opções de cores</summary><br />
+
+* O título deverá ficar dentro de uma tag `h1` com o `id` denominado `title`;
+* O texto do título deve ser **exatamente** "Paleta de Cores".
+* A paleta de cores deve ser um elemento com `id` denominado `color-palette`, e cada cor individual contida na paleta de cores deve possuir a `classe` chamada `color`;
+* A cor de fundo de cada elemento da paleta deverá ser a cor que o elemento representa. **A única cor não permitida na paleta é a cor branca**;
+* Cada elemento da paleta de cores deverá ter uma borda preta, sólida e com 1 pixel de largura;
+* A paleta de cores deverá listar todas as cores disponíveis para utilização lado a lado, e deverá ser posicionada abaixo do título `Paleta de Cores`;
+* A paleta de cores não deve conter cores repetidas.
+
+**De olho na dica 👀:** utilize manipulação do DOM para criar os elementos, adicionar identificadores, classes e estilos.
+  
+**O que será testado:**
+
+* O título deve possuir a tag `h1`;
+* O título deve possuir o `id` `title`;
+* O título deve ser `Paleta de Cores`.
+* A paleta de cores deve possuir o `id` `color-palette`;
+* As cores individuais da paleta devem possuir a `classe` `color`;
+* A cor de fundo de cada elemento da paleta é a cor que o elemento representa :warning: **A única cor não permitida na paleta é a cor branca** :warning:;
+* Os elementos da paleta de cores devem ter borda preta, sólida e com 1 pixel de largura;
+* As cores da paleta devem estar lado a lado;
+* A paleta de cores deve estar posicionada abaixo do título `Paleta de Cores`;
+* A paleta de cores não pode conter cores repetidas.
+  
+</details>
+
+## 2 - Adicione à página um quadro contendo 25 pixels, sendo que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel
+
+<details>
+  <summary>Sua página deve conter um quadro de pixels 5x5; sendo que dada <code>pixel</code> do quadro deve possuir 40px de largura e 40px de altura e uma borda preta sólida de 1px de espessura</summary>
+
+* O quadro de _pixels_ deve estar visível na tela e ter 5 elementos de largura e 5 elementos de comprimento;
+* O quadro de _pixels_ deve possuir o `id` denominado `pixel-board`, e cada _pixel_ individual dentro do quadro deve possuir a `classe` denominada `pixel`;
+* A cor inicial dos _pixels_ que compõem o quadro de pixels deve ser branca;
+* O quadro de _pixels_ deve aparecer abaixo da paleta de cores.
+
+**De olho na dica 👀:** utilize os [_loops_](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/4791fd2b-f154-4c25-b4eb-cef521db8e61/day/93d3326f-99ca-47cf-99d8-e93baa78a169/lesson/c58d3b0f-5f3c-47cd-9176-07791f5500e0) para evitar trabalhos repetitivos e a manipulação do DOM para criar os elementos, adicionar identificadores, classes e estilos.
+
+**O que será testado:**
+
+* O quadro de _pixels_ deve possuir o `id` `pixel-board` e deve estar renderizado na tela;
+* Cada pixel individual dentro do quadro deve possuir a `classe` `pixel`;
+* A cor inicial dos _pixels_ dentro do quadro deve ser branca;
+* O quadro de _pixels_ deve aparecer abaixo da paleta de cores.
+* O quadro de _pixels_ deve possuir altura e comprimento de 5 elementos;
+* Os elementos do quadro devem possuir 40 px de altura e 40 px de largura, incluindo o seu conteúdo e excluindo a borda preta;
+* Os elementos do quadro devem possuir borda preta sólida de 1px de espessura.
+
+</details>
+
+## 3 - Crie uma função para selecionar uma cor na paleta de cores
+
+<details>
+  <summary>A cor clicada deve ser a única selecionada na paleta de cores.</summary>
+
+* A cor clicada deve receber a `classe` `selected` e a cor previamente selecionada deve perder esta `classe`;
+* Somente uma das cores da paleta pode ter a classe `selected` de cada vez;
+* Os elementos que deverão receber a `classe` `selected` devem ser os mesmos elementos que possuem a classe `color`, como especificado no **requisito 1**.
+
+**O que será testado:**
+
+* Somente uma cor da paleta de cores pode ter a classe `selected` de cada vez;
+* Os pixels dentro do quadro não devem ter a classe `selected` quando são clicados.
+
+</details>
+
+## 4 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores
+
+<details>
+  <summary>O <code>pixel</code> do quadro clicado deve ter sua cor alterada para a cor selecionada na paleta de cores</summary><br />
+
+**O que será testado:**
+
+* Após selecionar uma cor na paleta de cores, é possível pintar os pixels do quadro com essa cor;
+* Somente o pixel que foi clicado deve ter a cor alterada, sem influenciar na cor dos demais pixels.
+
+</details>
+
+## 5 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco
+
+<details>
+  <summary>Sua página deve ter um botão que, ao ser clicado, deixe todos os <code>pixels</code> do quadro com a cor branca</summary><br />
+
+**De olho na dica 👀:** use manipulação do DOM com JavaScript para criar os elementos, adicionar identificadores, classes e estilos.
+  
+**O que será testado:**
+
+* O botão deve possuir o `id` `clear-board`;
+* O botão deve estar posicionado entre a paleta de cores e o quadro de pixels;
+* O botão deve possuir o texto `Limpar`;
+* O botão ao ser clicado, deve deixar todos os pixels do quadro preenchidos de branco.
+
+</details>
+
+## 6 - Adicione um botão para gerar cores aleatórias para a paleta de cores
+
+<details>
+  <summary>As quatro cores devem ser geradas aleatoriamente ao clicar no botão.</summary><br />
+
+**De olho na dica 👀:** use manipulação do DOM com JavaScript para criar os elementos, adicionar identificadores, classes e estilos.
+  
+**O que será testado:**
+
+* O botão deve possuir o `id` denominado `button-random-color`;
+* O botão deve possuir o texto `Cores aleatórias`;
+* As cores geradas na paleta são diferentes a cada click do botão;
+
+</details>
+
+## 7 - Crie uma função para salvar e recuperar o seu desenho atual no localStorage
+
+<details>
+  <summary>Ao recarregar a página, o quadro deve permanecer. Para isso, a cada clique em um pixel, salve a cor e a posição no localStorage. Ao recarregar a página o quadro deverá ser recuperado a partir dos dados que foram salvos no localStorage.</summary><br />
+
+**De olho na dica 👀:** Antes de usar o dado do localStorage verifique se ele está lá (existe) ou se é a primeira vez.
+  
+**O que será testado:**
+
+* Os pixels pintados devem ser salvos no localStorage com a chave `pixelBoard`;
+* O quadro deve ser preenchido com as mesmas cores utilizadas anteriormente, nas posições corretas ao recarregar a página
+
+</details>
+
+# Requisitos Bônus
+
+## 8 - Crie um input que permita à pessoa usuária preencher um novo tamanho para o quadro de pixels
+
+<details>
+  <summary>A página deve conter um input para que a pessoa usuária possa definir o tamanho do quadro de pixels</summary>
+
+* Crie um input com `id` `board-size` posicionado entre a paleta de cores e o quadro de pixels para receber um valor maior que zero para definir o tamanho do quadro de pixels.
+* Crie um botão que deve conter o texto "VQV" e `id` `generate-board`;
+* O input e o botão com o texto "VQV" devem ter o mesmo `parent-node`;
+* O botão, ao ser clicado, deve alterar o tamanho do quadro para **N** pixels de largura e **N** pixels de altura, em que **N** é o número inserido no input. Ou seja, se o valor passado para o input for igual a 7, ao clicar no botão, será gerado um quadro de 49 pixels (7 pixels de largura x 7 pixels de altura);
+* O input só deve aceitar número maiores que zero. Essa restrição **deve** ser feita usando os atributos do elemento `input`;
+* Se nenhum valor for colocado no input ao clicar no botão, mostre um `alert` com o texto: "Board inválido!";
+* O novo quadro deve ter todos os pixels preenchidos com a cor branca.
+* O quadro salvo no localStorage deve ser apagado.
+  
+**De olho na dica 👀:** use manipulação do DOM com JavaScript para criar os elementos, adicionar identificadores, classes e estilos.
+  
+**O que será testado:**
+
+* O input deve possuir o `id` `board-size`;
+* O input deve aceitar apenas números maiores que zero. Essa restrição deve ser feita usando os atributos do elemento `input`;
+* O input deve estar posicionado entre a paleta de cores e o quadro de pixels;
+* O botão deve possuir o `id` `generate-board`;
+* O botão deve possuir o texto `VQV`;
+* O input e o botão com o texto "VQV" devem ter o mesmo `parent-node`;
+* O botão, ao ser clicado, deve mudar o tamanho do board usando o valor do input;
+* O botão, ao ser clicado sem valor definido no input, deve emitir um `alert` com o texto: `Board inválido!`;
+* O quadro gerado deve ter todos os pixels preenchidos com a cor branca.
+
+</details>
+
+## 9 - Crie uma função que limite o tamanho mínimo e máximo do quadro de pixels
+
+<details>
+  <summary>O quadro não pode ser definido com menos de 5 ou mais de 50 <code>pixels</code></summary>
+
+* Caso o valor digitado no input `board-size` esteja fora do intervalo de 5 a 50, faça:
+
+  1. Para um valor de `board-size` menor que 5, considere 5 `pixels` como o valor padrão;
+
+  2. Para um valor de `board-size` maior que 50, considere 50 `pixels` como o valor padrão.
+
+**O que será testado:**
+
+* A altura do board pode ser igual a 50;
+* A altura do board é 5 pixels quando um valor menor que 5 é colocado no input;
+* A altura do board é 50 pixels quando um valor maior que 50 é colocado no input.
+
+</details>
+
+## 10 - Crie uma função para manter o tamanho novo do board ao recarregar a página
+
+<details>
+  <summary>O tamanho do board deve ser mantido ao recarregar a página usando localStorage</summary><br />
+
+**De olho na dica 👀:** Antes de utilizar os dados armazenados no localStorage, verifique se eles existem ou se é a primeira vez que estão sendo criados.
+  
+**O que será testado:**
+
+* O tamanho do board gerado deve ser salvo no localStorage com a chave `boardSize`;
+* O quadro deve ter o mesmo tamanho gerado ao recarregar a página.
+
+</details>
